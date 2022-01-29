@@ -1,0 +1,125 @@
+:root {
+  --clr-primary: hsl(246, 80%, 60%);
+  --clr-work: hsl(15, 100%, 70%);
+  --clr-play: hsl(195, 74%, 62%);
+  --clr-study: hsl(348, 100%, 68%);
+  --clr-exercise: hsl(145, 58%, 55%);
+  --clr-social: hsl(264, 64%, 52%);
+  --clr-selfcare: hsl(43, 84%, 65%);
+
+  --clr-verydarkblue: hsl(226, 43%, 10%);
+  --clr-darkblue: hsl(235, 46%, 20%);
+  --clr-desatblue: hsl(235, 45%, 61%);
+  --clr-paleblue: hsl(236, 100%, 87%);
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+body {
+  font-size: 18px;
+  background-color: var(--clr-verydarkblue);
+  color: whitesmoke;
+  font-family: Rubik, "sans-serif";
+}
+.container {
+  width: fit-content;
+  height: 400px;
+  margin: 100px auto;
+  display: grid;
+  grid-template-columns: repeat(4, 200px);
+  gap: 15px;
+}
+.profile-card {
+  grid-row: 1/3;
+  border-radius: 10px;
+  background-color: var(--clr-darkblue);
+}
+.time-card {
+  border-radius: 10px;
+  padding-top: 40px;
+  position: relative;
+}
+.work {
+  background-image: url("images/icon-work.svg");
+  background-color: var(--clr-work);
+}
+.play {
+  background-image: url("images/icon-play.svg");
+  background-color: var(--clr-play);
+}
+.study {
+  background-image: url("images/icon-study.svg");
+  background-color: var(--clr-study);
+}
+.selfcare {
+  background-image: url("images/icon-self-care.svg");
+  background-color: var(--clr-selfcare);
+}
+.social {
+  background-image: url("images/icon-social.svg");
+  background-color: var(--clr-social);
+}
+.exercise {
+  background-image: url("images/icon-exercise.svg");
+  background-color: var(--clr-exercise);
+}
+
+.dark-card {
+  background-color: var(--clr-darkblue);
+  border-radius: 10px;
+  height: 100px;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: -1px;
+  padding: 20px 20px;
+}
+
+.personal-card {
+  background-color: var(--clr-primary);
+  height: 52%;
+  border-radius: 10px;
+  padding: 25px 15px;
+}
+.d-w-m {
+  padding: 20px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  overflow: hidden;
+}
+span {
+  display: inline-block;
+  width: 180px;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+}
+.duration {
+  font-size: 0.8em;
+  line-height: 0.5em;
+}
+
+.heading {
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.data-h {
+  font-size: 2em;
+  line-height: 0.125em;
+}
+
+.data-p {
+  font-size: 0.75em;
+}
+
+@media (max-width: 375px) {
+  .container {
+  }
+}
