@@ -24,127 +24,132 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body onload="getData()">
-    <div class="container">
-      <div class="profile-card">
-        <div class="personal-card">
-          <img
-            src="images/image-jeremy.png"
-            class="dp"
-            alt="Jeremy's profile picture"
-          />
-          <p>
-            Report for<br /><span id="usr-name"
-              >Jeremy <br />
-              Robson</span
-            >
-          </p>
-        </div>
-        <div class="d-w-m">
-          <a href="#" class="dur-link">
-            <p class="duration daily-btn" onclick="displayDaily()">Daily</p>
-          </a>
-          <a href="#" class="dur-link">
-            <p class="duration weekly-btn" onclick="displayWeekly()">Weekly</p>
-          </a>
-          <a href="#" class="dur-link">
-            <p class="duration monthly-btn" onclick="displayMonthly()">
-              Monthly
+    <main>
+      <div class="container">
+        <div class="profile-card">
+          <div class="personal-card">
+            <img
+              src="images/image-jeremy.png"
+              class="dp"
+              alt="Jeremy's profile picture"
+            />
+            <p>
+              Report for<br /><span id="usr-name"
+                >Jeremy <br />
+                Robson</span
+              >
             </p>
-          </a>
+          </div>
+          <div class="d-w-m">
+            <a href="#" class="dur-link">
+              <p class="duration daily-btn" onclick="displayDaily()">Daily</p>
+            </a>
+            <a href="#" class="dur-link">
+              <p class="duration weekly-btn" onclick="displayWeekly()">
+                Weekly
+              </p>
+            </a>
+            <a href="#" class="dur-link">
+              <p class="duration monthly-btn" onclick="displayMonthly()">
+                Monthly
+              </p>
+            </a>
+          </div>
         </div>
-      </div>
-      <div class="time-card work">
-        <div class="dark-card">
-          <div class="heading">
-            <p>Work</p>
-            <i class="fa fa-ellipsis-h fa-custom"></i>
+        <div class="time-card work">
+          <div class="dark-card">
+            <div class="heading">
+              <p>Work</p>
+              <i class="fa fa-ellipsis-h fa-custom"></i>
+            </div>
+            <div class="dur-display">
+              <p class="cur-hrs-w data-h"></p>
+              <p class="pre-hrs-w data-p"></p>
+            </div>
+            <br />
           </div>
-          <div class="dur-display">
-            <p class="cur-hrs-w data-h"></p>
-            <p class="pre-hrs-w data-p"></p>
-          </div>
-          <br />
         </div>
-      </div>
-      <div class="time-card play">
-        <div class="dark-card">
-          <div class="heading">
-            <p>Play</p>
-            <i class="fa fa-ellipsis-h fa-custom"></i>
-          </div>
-          <div class="dur-display">
-            <p class="cur-hrs-p data-h"></p>
-            <p class="pre-hrs-p data-p"></p>
-          </div>
+        <div class="time-card play">
+          <div class="dark-card">
+            <div class="heading">
+              <p>Play</p>
+              <i class="fa fa-ellipsis-h fa-custom"></i>
+            </div>
+            <div class="dur-display">
+              <p class="cur-hrs-p data-h"></p>
+              <p class="pre-hrs-p data-p"></p>
+            </div>
 
-          <br />
+            <br />
+          </div>
         </div>
-      </div>
-      <div class="time-card study">
-        <div class="dark-card">
-          <div class="heading">
-            <p>Study</p>
-            <i class="fa fa-ellipsis-h fa-custom"></i>
-          </div>
-          <div class="dur-display">
-            <p class="cur-hrs-st data-h"></p>
-            <p class="pre-hrs-st data-p"></p>
-          </div>
+        <div class="time-card study">
+          <div class="dark-card">
+            <div class="heading">
+              <p>Study</p>
+              <i class="fa fa-ellipsis-h fa-custom"></i>
+            </div>
+            <div class="dur-display">
+              <p class="cur-hrs-st data-h"></p>
+              <p class="pre-hrs-st data-p"></p>
+            </div>
 
-          <br />
+            <br />
+          </div>
         </div>
-      </div>
-      <div class="time-card exercise">
-        <div class="dark-card">
-          <div class="heading">
-            <p>Exercise</p>
-            <i class="fa fa-ellipsis-h fa-custom"></i>
-          </div>
-          <div class="dur-display">
-            <p class="cur-hrs-e data-h"></p>
-            <p class="pre-hrs-e data-p"></p>
-          </div>
+        <div class="time-card exercise">
+          <div class="dark-card">
+            <div class="heading">
+              <p>Exercise</p>
+              <i class="fa fa-ellipsis-h fa-custom"></i>
+            </div>
+            <div class="dur-display">
+              <p class="cur-hrs-e data-h"></p>
+              <p class="pre-hrs-e data-p"></p>
+            </div>
 
-          <br />
+            <br />
+          </div>
         </div>
-      </div>
-      <div class="time-card social">
-        <div class="dark-card">
-          <div class="heading">
-            <p>Social</p>
-            <i class="fa fa-ellipsis-h fa-custom"></i>
-          </div>
-          <div class="dur-display">
-            <p class="cur-hrs-so data-h"></p>
-            <p class="pre-hrs-so data-p"></p>
-          </div>
+        <div class="time-card social">
+          <div class="dark-card">
+            <div class="heading">
+              <p>Social</p>
+              <i class="fa fa-ellipsis-h fa-custom"></i>
+            </div>
+            <div class="dur-display">
+              <p class="cur-hrs-so data-h"></p>
+              <p class="pre-hrs-so data-p"></p>
+            </div>
 
-          <br />
+            <br />
+          </div>
         </div>
-      </div>
-      <div class="time-card selfcare">
-        <div class="dark-card">
-          <div class="heading">
-            <p>Self care</p>
-            <i class="fa fa-ellipsis-h fa-custom"></i>
-          </div>
-          <div class="dur-display">
-            <p class="cur-hrs-se data-h"></p>
-            <p class="pre-hrs-se data-p"></p>
-          </div>
+        <div class="time-card selfcare">
+          <div class="dark-card">
+            <div class="heading">
+              <p>Self care</p>
+              <i class="fa fa-ellipsis-h fa-custom"></i>
+            </div>
+            <div class="dur-display">
+              <p class="cur-hrs-se data-h"></p>
+              <p class="pre-hrs-se data-p"></p>
+            </div>
 
-          <br />
+            <br />
+          </div>
         </div>
       </div>
-    </div>
-    <div id="myData"></div>
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by
-      <a href="https://github.com/MThabsheer7">Muhammad Thabsheer</a>.
-    </div>
+    </main>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://github.com/MThabsheer7">Muhammad Thabsheer</a>.
+      </div>
+    </footer>
     <script src="app.js"></script>
   </body>
 </html>
