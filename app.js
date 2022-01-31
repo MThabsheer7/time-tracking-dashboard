@@ -1,4 +1,3 @@
-let dbtn = document.querySelector(".daily-btn");
 
 let curw = document.querySelector(".cur-hrs-w");
 let prew = document.querySelector(".pre-hrs-w");
@@ -14,21 +13,30 @@ let curse = document.querySelector(".cur-hrs-se");
 let prese = document.querySelector(".pre-hrs-se");
 var datafetch;
 
+let dbtn = document.querySelector(".daily-btn");
+let wbtn = document.querySelector(".weekly-btn");
+let mbtn = document.querySelector(".monthly-btn");
 
-fetch("data.json")
-    .then(function (response) {
-        //JSON data will arrive here
-        return response.json();
-    })
-    .then(function (data) {
-        datafetch = data;
-    })
-    .catch(function (err) {
-        //Error occured
-        console.log(err);
-    });
+async function getData() {
+    await fetch("data.json")
+        .then(function (response) {
+            //JSON data will arrive here
+            return response.json();
+        })
+        .then(function (data) {
+            datafetch = data;
+        })
+        .catch(function (err) {
+            //Error occured
+            console.log(err);
+        });
+    displayDaily();
+}
+
+
 
 function displayDaily() {
+
     for (var i = 0; i < datafetch.length; i++) {
         if (datafetch[i].title === "Work") {
             curw.innerHTML = datafetch[i].timeframes.daily.current + "hrs";
@@ -55,6 +63,9 @@ function displayDaily() {
             prese.innerHTML = "Yesterday - " + datafetch[i].timeframes.daily.previous + "hrs";
         }
     }
+    dbtn.style.color = "white";
+    wbtn.style.color = "#6f76c8";
+    mbtn.style.color = "#6f76c8";
 }
 
 function displayWeekly() {
@@ -84,6 +95,9 @@ function displayWeekly() {
             prese.innerHTML = "Last Week - " + datafetch[i].timeframes.weekly.previous + "hrs";
         }
     }
+    dbtn.style.color = "#6f76c8";
+    wbtn.style.color = "white";
+    mbtn.style.color = "#6f76c8";
 }
 
 function displayMonthly() {
@@ -113,6 +127,9 @@ function displayMonthly() {
             prese.innerHTML = "Last Month - " + datafetch[i].timeframes.monthly.previous + "hrs";
         }
     }
+    dbtn.style.color = "#6f76c8";
+    wbtn.style.color = "#6f76c8";
+    mbtn.style.color = "white";
 }
 
 

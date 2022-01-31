@@ -19,7 +19,9 @@
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
-
+a {
+  text-decoration: none;
+}
 body {
   font-size: 18px;
   background-color: var(--clr-verydarkblue);
@@ -78,6 +80,22 @@ body {
   right: 0px;
   bottom: -1px;
   padding: 20px 20px;
+  transition: all 300ms ease;
+}
+
+.dark-card:hover {
+  cursor: pointer;
+  background-color: var(--clr-desatblue);
+}
+
+.fa-custom {
+  color: var(--clr-paleblue);
+  transition: 250ms ease;
+  font-size: 16px;
+}
+.fa-custom:hover {
+  color: white;
+  cursor: pointer;
 }
 
 .personal-card {
@@ -85,6 +103,16 @@ body {
   height: 52%;
   border-radius: 10px;
   padding: 25px 15px;
+  font-size: 0.75em;
+}
+#usr-name {
+  font-size: 2.5em;
+}
+
+.dp {
+  width: 70px;
+  border: 3px solid whitesmoke;
+  border-radius: 50%;
 }
 .d-w-m {
   padding: 20px 25px;
@@ -103,11 +131,22 @@ span {
 .duration {
   font-size: 0.8em;
   line-height: 0.5em;
+  color: var(--clr-desatblue);
+  transition: all 250ms ease;
+}
+
+.duration:hover {
+  cursor: pointer;
+  color: white !important;
 }
 
 .heading {
+  height: 10%;
   font-size: 0.8em;
   font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .data-h {
@@ -117,9 +156,39 @@ span {
 
 .data-p {
   font-size: 0.75em;
+  color: var(--clr-paleblue);
 }
 
-@media (max-width: 375px) {
+@media (max-width: 720px) {
   .container {
+    height: 100%;
+    width: 80%;
+    grid-template-columns: 1fr;
+    margin: 20px auto;
+    grid-gap: 20px;
+  }
+  .d-w-m {
+    flex-direction: row;
+    padding: 10px;
+  }
+  .personal-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .dp {
+    width: 70px;
+    height: 70px;
+  }
+  .dark-card {
+    height: 50px;
+  }
+  .time-card {
+    height: 100px;
+  }
+  .dur-display {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
